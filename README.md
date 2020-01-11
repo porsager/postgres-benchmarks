@@ -14,7 +14,7 @@ Currently benchmarked libraries are
 
 ## Results
 
-These are the results from running the benchmarks on a Macbook Pro 2,9 GHz Quad-Core Intel Core i7 with a default Postgres 12 installation and Node 12.4.0.
+These are the results from running the benchmarks on a Macbook Pro 2,9 GHz Quad-Core Intel Core i7 with a default Postgres 12 installation and Node 12.14.0.
 The time is the average of 5 rounds, running the queries 10,000 times after some warmup rounds.
 
 client     |         select |     select_arg |    select_args |   select_where

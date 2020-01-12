@@ -7,6 +7,8 @@ const queries = [
     , clients = [
       'postgres',
       'pg-promise',
+      'pg-promise-native',
+      'postgres-promise',
       'pg',
       'pg-native',
       //'slonik'

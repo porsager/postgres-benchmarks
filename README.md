@@ -21,6 +21,7 @@ client     |         select |     select_arg |    select_args |   select_where
 :--------- | -------------: | -------------: | -------------: | -------------:
 postgres   |    82ms (5.1x) |    91ms (5.3x) |   226ms (3.6x) |   229ms (5.0x)
 pg-promise |   331ms (1.3x) |   368ms (1.3x) |   605ms (1.3x) |   771ms (1.5x)
+pg-promise-native |  0.317s (1.3x) |  0.401s (1.2x) |  0.618s (1.3x) |  0.799s (1.4x)
 pg         |   292ms (1.4x) |   473ms (1.0x) |   772ms (1.1x) |  1070ms (1.1x)
 pg-native  |   419ms (1.0x) |   478ms (1.0x) |   816ms (1.0x) |  1138ms (1.0x)
 slonik     | 10466ms (0.0x) | 10904ms (0.0x) | 11190ms (0.0x) | 11107ms (0.0x)

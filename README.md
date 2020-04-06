@@ -10,7 +10,6 @@ Currently benchmarked libraries are
 - [pg-promise](https://github.com/vitaly-t/pg-promise)
 - [pg](https://github.com/brianc/node-postgres)
 - [pg-native](https://github.com/brianc/node-pg-native)
-- [slonik](https://github.com/gajus/slonik)
 
 ## Results
 
@@ -24,10 +23,6 @@ pg-promise |   331ms (1.3x) |   368ms (1.3x) |   605ms (1.3x) |   771ms (1.5x)
 pg-promise-native |   317ms (1.3x) |   401ms (1.2x) |   618ms (1.3x) |   799ms (1.4x)
 pg         |   292ms (1.4x) |   473ms (1.0x) |   772ms (1.1x) |  1070ms (1.1x)
 pg-native  |   419ms (1.0x) |   478ms (1.0x) |   816ms (1.0x) |  1138ms (1.0x)
-slonik     | 10466ms (0.0x) | 10904ms (0.0x) | 11190ms (0.0x) | 11107ms (0.0x)
-
-
-> Slonik is left out of the chart because I'm probably using it wrong and the numbers seem too far off.
 
 ![results chart](results.png)
 > lower is better

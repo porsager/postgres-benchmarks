@@ -6,10 +6,12 @@ This is a set of benchmarks focusing on the performance of Postgres client libra
 
 Currently benchmarked libraries are
 
-- [postgres](https://github.com/porsager/postgres)
+- [Postgres.js](https://github.com/porsager/postgres)
 - [pg-promise](https://github.com/vitaly-t/pg-promise)
 - [pg](https://github.com/brianc/node-postgres)
 - [pg-native](https://github.com/brianc/node-pg-native)
+- [slonik](https://github.com/gajus/slonik)
+
 
 ## Results
 
@@ -18,12 +20,12 @@ The time is the average of 5 rounds, running the queries 10,000 times after some
 
 client     |         select |     select_arg |    select_args |   select_where
 :--------- | -------------: | -------------: | -------------: | -------------:
-postgres   |  0.100s (4.8x) |  0.105s (7.4x) |  0.231s (4.3x) |  0.233s (5.1x)
-pg-promise |  0.360s (1.3x) |  0.427s (1.8x) |  0.662s (1.5x) |  0.801s (1.5x)
-pg-promise-native |  0.371s (1.3x) |  0.435s (1.8x) |  0.673s (1.5x) |  0.807s (1.5x)
-pg         |  0.322s (1.5x) |  0.611s (1.3x) |  0.815s (1.2x) |  1.057s (1.1x)
-pg-native  |  0.479s (1.0x) |  0.551s (1.4x) |  0.885s (1.1x) |  1.183s (1.0x)
-slonik     |  0.453s (1.1x) |  0.773s (1.0x) |  0.992s (1.0x) |  1.108s (1.1x)
+[Postgres.js](https://github.com/porsager/postgres)   |  0.100s (4.8x) |  0.105s (7.4x) |  0.231s (4.3x) |  0.233s (5.1x)
+[pg-promise](https://github.com/vitaly-t/pg-promise) |  0.360s (1.3x) |  0.427s (1.8x) |  0.662s (1.5x) |  0.801s (1.5x)
+[pg-promise-native](https://github.com/vitaly-t/pg-promise) |  0.371s (1.3x) |  0.435s (1.8x) |  0.673s (1.5x) |  0.807s (1.5x)
+[pg](https://github.com/brianc/node-postgres)         |  0.322s (1.5x) |  0.611s (1.3x) |  0.815s (1.2x) |  1.057s (1.1x)
+[pg-native](https://github.com/brianc/node-pg-native)  |  0.479s (1.0x) |  0.551s (1.4x) |  0.885s (1.1x) |  1.183s (1.0x)
+[slonik](https://github.com/gajus/slonik)     |  0.453s (1.1x) |  0.773s (1.0x) |  0.992s (1.0x) |  1.108s (1.1x)
 
 ![results chart](results.png)
 > lower is better
@@ -72,3 +74,12 @@ select * from pg_catalog.pg_type where typname = $1
 --$1 = 'bool'
 ```
 
+
+#### Running the benchmark
+
+Ensure you have a PostgreSQL server running. You can add connection details using environment vars PGDATABASE, PGUSER etc.
+
+```bash
+npm install
+npm start
+```

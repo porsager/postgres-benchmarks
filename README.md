@@ -13,16 +13,17 @@ Currently benchmarked libraries are
 
 ## Results
 
-These are the results from running the benchmarks on a Macbook Pro 2,9 GHz Quad-Core Intel Core i7 with a default Postgres 12 installation and Node 12.14.0.
+These are the results from running the benchmarks on a Macbook Pro 2,9 GHz Quad-Core Intel Core i7 with a default Postgres 12.6 installation and Node 12.20.1.
 The time is the average of 5 rounds, running the queries 10,000 times after some warmup rounds.
 
 client     |         select |     select_arg |    select_args |   select_where
 :--------- | -------------: | -------------: | -------------: | -------------:
-postgres   |    82ms (5.1x) |    91ms (5.3x) |   226ms (3.6x) |   229ms (5.0x)
-pg-promise |   331ms (1.3x) |   368ms (1.3x) |   605ms (1.3x) |   771ms (1.5x)
-pg-promise-native |   317ms (1.3x) |   401ms (1.2x) |   618ms (1.3x) |   799ms (1.4x)
-pg         |   292ms (1.4x) |   473ms (1.0x) |   772ms (1.1x) |  1070ms (1.1x)
-pg-native  |   419ms (1.0x) |   478ms (1.0x) |   816ms (1.0x) |  1138ms (1.0x)
+postgres   |  0.100s (4.8x) |  0.105s (7.4x) |  0.231s (4.3x) |  0.233s (5.1x)
+pg-promise |  0.360s (1.3x) |  0.427s (1.8x) |  0.662s (1.5x) |  0.801s (1.5x)
+pg-promise-native |  0.371s (1.3x) |  0.435s (1.8x) |  0.673s (1.5x) |  0.807s (1.5x)
+pg         |  0.322s (1.5x) |  0.611s (1.3x) |  0.815s (1.2x) |  1.057s (1.1x)
+pg-native  |  0.479s (1.0x) |  0.551s (1.4x) |  0.885s (1.1x) |  1.183s (1.0x)
+slonik     |  0.453s (1.1x) |  0.773s (1.0x) |  0.992s (1.0x) |  1.108s (1.1x)
 
 ![results chart](results.png)
 > lower is better

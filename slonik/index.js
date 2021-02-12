@@ -1,6 +1,11 @@
 const slonik = require('slonik')
 
-const pool = slonik.createPool('postgres://', { maximumPoolSize: 4, connectionTimeout: 30 * 1000, preferNativeBindings: false })
+const pool = slonik.createPool('postgres://', {
+  captureStackTrace: false,
+  maximumPoolSize: 4,
+  connectionTimeout: 30 * 1000,
+  preferNativeBindings: false
+})
 
 module.exports = {
   queries: {

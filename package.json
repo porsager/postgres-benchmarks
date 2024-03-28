@@ -9,10 +9,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "pg": "8.5.1",
-    "pg-native": "3.0.0",
-    "pg-promise": "10.9.2",
-    "postgres": "1.0.2",
-    "slonik": "23.5.5"
+    "pg": "8.11.3",
+    "pg-native": "3.0.1",
+    "pg-promise": "11.5.5",
+    "postgres": "3.4.4",
+    "slonik": "39.3.0"
   }
 }

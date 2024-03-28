@@ -10,7 +10,8 @@ const queries = [
       'pg-promise-native',
       'pg',
       'pg-native',
-      'slonik'
+      'slonik',
+      'ts-postgres'
     ]
     , warmup = 3
     , iterations = 10000
